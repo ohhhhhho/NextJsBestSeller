@@ -1,0 +1,16 @@
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 15px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+}
+.item{
+    border: solid 1px #fff;
+    border-radius: 5px;
+}
+.item a{
+    padding: 5px 15px;
+    display: block;
+}
