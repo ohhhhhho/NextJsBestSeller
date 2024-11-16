@@ -2,7 +2,7 @@ import { API_DETAIL } from "@/app/constance";
 import styles from '@/app/styles/bookDetail.module.css'
 import { IBookDetail } from "@/app/type";
 
-async function getDetails(name:string): Promise<IBookDetail>{
+export async function getDetails(name:string): Promise<IBookDetail>{
     const json = await(await fetch(`${API_DETAIL}/${name}`)).json();
     return json
 }

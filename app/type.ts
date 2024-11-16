@@ -10,6 +10,7 @@ export interface IBookList {
   }
 export interface IBookDetail{
     results: {
+      list_name:string,
         books: {
           rank: number;
           title: string;

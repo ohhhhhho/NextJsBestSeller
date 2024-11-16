@@ -6,15 +6,29 @@
     margin: 0 auto;
 }
 .item{   
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
     row-gap: 5px;
-    justify-content: center;
+    justify-content: space-between;
 }
 .item img{
-    height: 290px;      
-
+    height: 400px;
+    object-fit: fill;
 }
 .item a{
-    align-self: end;
+    position: relative;
+}
+.item a::after{
+    content:'';
+    display: block;
+    width:0;
+    height:1px;
+    background:#fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+.item a:hover::after{
+    width:70px;
 }

@@ -14,3 +14,6 @@
     padding: 5px 15px;
     display: block;
 }
+.item:hover{
+    opacity: 0.6;
+}

@@ -1,0 +1,12 @@
+.wrap{
+    width: 80%;
+    margin:0 auto;
+}
+.title{
+    font-size:26px;
+}
+.desc{
+    margin-top:15px;
+    font-size:17px;
+    line-height:22px;
+}
