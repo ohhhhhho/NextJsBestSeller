@@ -1,9 +1,7 @@
 import { Suspense } from "react"
 import BookDetail, { getDetails } from "../../../components/bookDetail"
-interface IParams {
-    params: { name: string };
-}
-export async function generateMetadata({ params}: IParams) {
+
+export async function generateMetadata({ params}: {params: Promise<{ name: string }>}) {
     const {name} = await params
     const book = await getDetails(name)
     return {
@@ -11,7 +9,7 @@ export async function generateMetadata({ params}: IParams) {
     }
 }
 
-export default async function Detail({params}:IParams){
+export default async function Detail({params}:{params: Promise<{ name: string }>}){
     const {name}  = await params
     return(
         <>
